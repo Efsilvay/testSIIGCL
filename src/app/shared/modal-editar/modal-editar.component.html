@@ -1,0 +1,26 @@
+<h2 mat-dialog-title>Editar Elemento</h2>
+
+<mat-dialog-content>
+  <mat-form-field>
+    <mat-label>Nombre</mat-label>
+    <input matInput [(ngModel)]="data.name">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Genero</mat-label>
+    <input matInput [(ngModel)]="data.gender">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Especie</mat-label>
+    <input matInput [(ngModel)]="data.species">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Imagen</mat-label>
+    <input matInput [(ngModel)]="data.image">
+  </mat-form-field>
+  
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-button (click)="onCancel()">Cancelar</button>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Guardar</button>
+</mat-dialog-actions>

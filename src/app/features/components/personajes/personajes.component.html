@@ -1,0 +1,11 @@
+<div class="container">
+    <section class="resultados">
+        <app-character *ngFor="let c of characters" [char]="c"  [edit]="false"></app-character>
+    </section>
+    <section class="navegacion">
+        <button *ngIf="prev" mat-raised-button (click)="changePage(info.prev)">Anterior</button>
+        <button *ngIf="!prev" mat-raised-button disabled>Anterior</button>
+        <button *ngIf="next" mat-raised-button (click)="changePage(info.next)">Siguientes</button>
+        <button *ngIf="!next" mat-raised-button disabled>Siguientes</button>
+    </section>
+</div>

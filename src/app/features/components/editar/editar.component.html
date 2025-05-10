@@ -1,0 +1,5 @@
+<div class="container">
+    <section class="resultados">
+        <app-character *ngFor="let c of characters" [char]="c" [edit]="true" (edicion)="editarPersonaje($event)" (elim)="eliminarPersonaje($event)"></app-character>
+    </section>
+</div>

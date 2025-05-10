@@ -1,0 +1,12 @@
+<mat-card class="example-card" appearance="outlined">
+    <mat-card-header>
+        <mat-card-title class="titulo">Nombre: {{char.name}}</mat-card-title>
+        <mat-card-subtitle class="subtitulo">Especie: {{char.species}} - Genero: {{char.gender}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="{{char.image}}" alt="{{char.name}}">
+    <content *ngIf="edit" class="edicion">
+        <button mat-raised-button (click)="edita(char.id)">Editar</button>
+        <button mat-raised-button (click)="eliminar(char.id)">Eliminar</button>
+    </content>
+</mat-card>
+

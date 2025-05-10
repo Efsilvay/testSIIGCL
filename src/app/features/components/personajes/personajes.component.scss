@@ -1,0 +1,33 @@
+.container{
+padding: 0.01em 16px;
+}
+
+.resultados {
+  display: grid;
+  column-gap: 14px;
+  row-gap: 14px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 300px));
+  margin-top: 50px;
+  justify-content: space-around;
+}
+
+.navegacion{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+@media (min-width: 500px) and (max-width: 768px) {
+  .resultados {
+      grid-template-columns: repeat(2, 1fr);
+  }
+  input[type="text"] {
+      width: 70%;
+  }
+}
+@media (max-width: 499px) {
+  .resultados {
+      grid-template-columns: 1fr;
+  }
+}
